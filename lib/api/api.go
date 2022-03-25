@@ -268,7 +268,7 @@ func (s *service) Serve(ctx context.Context) error {
 	restMux.HandlerFunc(http.MethodGet, "/rest/system/error", s.getSystemError)               // -
 	restMux.HandlerFunc(http.MethodGet, "/rest/system/ping", s.restPing)                      // -
 	restMux.HandlerFunc(http.MethodGet, "/rest/system/status", s.getSystemStatus)             // -
-	restMux.HandlerFunc(http.MethodGet, "/rest/system/upgrade", s.getSystemUpgrade)           // -
+	//restMux.HandlerFunc(http.MethodGet, "/rest/system/upgrade", s.getSystemUpgrade)           // -
 	restMux.HandlerFunc(http.MethodGet, "/rest/system/version", s.getSystemVersion)           // -
 	restMux.HandlerFunc(http.MethodGet, "/rest/system/debug", s.getSystemDebug)               // -
 	restMux.HandlerFunc(http.MethodGet, "/rest/system/log", s.getSystemLog)                   // [since]
@@ -287,7 +287,7 @@ func (s *service) Serve(ctx context.Context) error {
 	restMux.HandlerFunc(http.MethodPost, "/rest/system/reset", s.postSystemReset)                // [folder]
 	restMux.HandlerFunc(http.MethodPost, "/rest/system/restart", s.postSystemRestart)            // -
 	restMux.HandlerFunc(http.MethodPost, "/rest/system/shutdown", s.postSystemShutdown)          // -
-	restMux.HandlerFunc(http.MethodPost, "/rest/system/upgrade", s.postSystemUpgrade)            // -
+	//restMux.HandlerFunc(http.MethodPost, "/rest/system/upgrade", s.postSystemUpgrade)            // -
 	restMux.HandlerFunc(http.MethodPost, "/rest/system/pause", s.makeDevicePauseHandler(true))   // [device]
 	restMux.HandlerFunc(http.MethodPost, "/rest/system/resume", s.makeDevicePauseHandler(false)) // [device]
 	restMux.HandlerFunc(http.MethodPost, "/rest/system/debug", s.postSystemDebug)                // [enable] [disable]
