@@ -674,7 +674,8 @@ func syncthingMain(options serveOptions) {
 	if cfgWrapper.Options().StartBrowser && !options.NoBrowser && !options.InternalRestarting {
 		// Can potentially block if the utility we are invoking doesn't
 		// fork, and just execs, hence keep it in its own routine.
-		go func() { _ = openURL(cfgWrapper.GUI().URL()) }()
+		// todo 注释
+		//go func() { _ = openURL(cfgWrapper.GUI().URL()) }()
 	}
 
 	status := app.Wait()
